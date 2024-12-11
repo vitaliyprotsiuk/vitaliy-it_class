@@ -27,6 +27,3 @@ class CarFilter:
             return True
         
         return False
-
-    def print_4():
-        print(4)
