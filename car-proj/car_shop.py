@@ -21,24 +21,3 @@ class CarShop:
                 top_speed_car = car
 
         return top_speed_car
-    
-    def findCars(self, min_year, max_year, min_price, max_price):
-        foundCars = []
-
-        for car in self.__cars:
-            if self._satisfyPrice(car, min_price, max_price) and self._satisfyYear(car, min_year, max_year):
-                foundCars.append(car)
-
-        return foundCars
-    
-    def _satisfyPrice(self, car, min_price, max_price):
-        if car.getPrice() >= min_price and car.getPrice() <= max_price:
-            return True
-        
-        return False
-    
-    def _satisfyYear(self, car, min_year, max_year):
-        if car.getYear() >= min_year and car.getYear() <= max_year:
-            return True
-        
-        return False

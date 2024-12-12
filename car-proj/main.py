@@ -10,9 +10,9 @@ it_club_dream_cars = [nazar_dream_car, vitalik_dream_car, mattew_dream_car]
 
 shop = CarShop(it_club_dream_cars)
 
-filter = CarFilter(1990, 2026, 0, 1000000) # args: min. year, max. year, min. price, max. price
+filter = CarFilter(0, 100001, 1996, 2900) # as args: min_price, max_price, min_year, max_year
 
-# shop.printAllCars()
+# shop.printAllCars() 
 
 for i in it_club_dream_cars:
     if filter.acceptCar(i, 0, 100001, 1996, 2900) == True:
