@@ -17,13 +17,15 @@ class Segment(Figure):
         y2 = pointB.getY()
 
         lenght = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+
         return round(lenght, 2)
     
     def perimeter(self):
-        return 10
+        perimeter = int(self.lenght(self.__pointA, self.__pointB))
+
+        return perimeter
     
     def __str__(self):
-        
         segment = f"A{'_'*math.floor(self.lenght(self.__pointA, self.__pointB))}B"
         
         return segment
