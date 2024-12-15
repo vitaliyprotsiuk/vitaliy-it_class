@@ -1,34 +1,12 @@
-from circle import Circle
-from rectangle import Rectangle
+from point import Point
+from segment import Segment
 
-action = int(input("1. Обчислити периметр прямокутника\n2. Обчислити площу прямокутника\n3. Обчислити довжину кола\n4. Обчислити площу кола\nВведіть дію, яку хочете виконати: "))
+pointA = Point(5, 10)
+pointB = Point(5, 13)
+segment1 = Segment(pointA, pointB)
 
-if action == 1:
-    a = int(input("Введіть сторону a: "))
-    b = int(input("Введіть сторону b: "))
+figures = [pointA, pointB, segment1]
 
-    rectangle = Rectangle(a, b)
-
-    print(rectangle.calculatePerimeter(a, b))
-
-if action == 2:
-    a = int(input("Введіть сторону a: "))
-    b = int(input("Введіть сторону b: "))
-
-    rectangle = Rectangle(a, b)
-
-    print(rectangle.calculateArea(a, b))
-
-if action == 3:
-    radius = int(input("Введіть радіус кола: "))
-
-    circle = Circle(radius)
-
-    print(circle.calculateLenght(radius))
-
-if action == 4:
-    radius = int(input("Введіть радіус кола: "))
-
-    circle = Circle(radius)
-
-    print(circle.calculateArea(radius))
+for figure in figures:
+    peremiter = figure.perimeter()
+    print(f"{figure}, P={peremiter}")
