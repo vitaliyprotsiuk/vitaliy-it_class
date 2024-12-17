@@ -1,14 +1,23 @@
+from triangle import Triangle
 from point import Point
 from segment import Segment
 
-pointA = Point(0, 0)
-pointB = Point(10, 10)
-segment1 = Segment(pointA, pointB)
+# figures
+pointA1 = Point(0, 0)
+pointB1 = Point(6, 6)
+pointA2 = Point(0, 0)
+pointB2 = Point(5, 5)
+pointA3 = Point(0, 0)
+pointB3 = Point(2, 2)
+segment1 = Segment(pointA1, pointB1)
+segment2 = Segment(pointA2, pointB2)
+segment3 = Segment(pointA3, pointB3)
+triangle = Triangle(segment1, segment2, segment3)
 
-figures = [pointA, pointB, segment1]
 
-print(f"Довжина відрізку = {segment1.lenght(pointA, pointB)}")
+figures = [pointA1, pointB1, segment1, segment2, segment3, triangle]
 
 for figure in figures:
     peremiter = figure.perimeter()
-    print(f"{figure}, P={peremiter}")
+    square = figure.square()
+    print(f"{figure}, P={peremiter}, Square={square}")

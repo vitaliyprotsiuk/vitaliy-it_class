@@ -10,22 +10,25 @@ class Segment(Figure):
         self.__pointA = pointA
         self.__pointB = pointB
 
-    def lenght(self, pointA, pointB):
-        x1 = pointA.getX()
-        y1 = pointA.getY()
-        x2 = pointB.getX()
-        y2 = pointB.getY()
+    def square(self):
+        return self.length()
+
+    def length(self):
+        x1 = self.__pointA.get_x()
+        y1 = self.__pointA.get_y()
+        x2 = self.__pointB.get_x()
+        y2 = self.__pointB.get_y()
 
         lenght = math.sqrt((x2-x1)**2 + (y2-y1)**2)
 
-        return round(lenght, 2)
+        return int(lenght)
     
     def perimeter(self):
-        perimeter = int(self.lenght(self.__pointA, self.__pointB))
+        perimeter = self.length()
 
         return perimeter
     
     def __str__(self):
-        segment = f"A{'_'*math.floor(self.lenght(self.__pointA, self.__pointB))}B"
+        segment = f"A{'_'*math.floor(self.length())}B"
         
         return segment

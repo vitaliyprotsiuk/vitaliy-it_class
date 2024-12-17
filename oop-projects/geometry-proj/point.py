@@ -9,10 +9,10 @@ class Point(Figure):
         self.__x = x
         self.__y = y
 
-    def getX(self):
+    def get_x(self):
         return self.__x
     
-    def getY(self):
+    def get_y(self):
         return self.__y
 
     def __str__(self):
