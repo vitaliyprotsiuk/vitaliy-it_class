@@ -1,3 +1,4 @@
+from circle import Circle
 from triangle import Triangle
 from point import Point
 from segment import Segment
@@ -13,9 +14,10 @@ segment1 = Segment(pointA1, pointB1)
 segment2 = Segment(pointA2, pointB2)
 segment3 = Segment(pointA3, pointB3)
 triangle = Triangle(segment1, segment2, segment3)
+circle = Circle(pointA1, 2)
 
 
-figures = [pointA1, pointB1, segment1, segment2, segment3, triangle]
+figures = [pointA1, pointB1, segment1, segment2, segment3, triangle, circle]
 
 for figure in figures:
     peremiter = figure.perimeter()

@@ -15,6 +15,7 @@ class CarShop:
 
         top_speed = self.__cars[0].getMaxSpeed()
         top_speed_car = self.__cars[0]
+        
         for car in self.__cars:
             if car.getMaxSpeed() > top_speed:
                 top_speed = car.getMaxSpeed()

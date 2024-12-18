@@ -52,13 +52,16 @@ class Triangle(Figure):
             return square
         else: 
             return 0
-        
-    
 
     def perimeter(self):
         len1 = self.__segment1.length()
         len2 = self.__segment2.length()
         len3 = self.__segment3.length()
+
+
         if self.checking() == True:
-            return int(len1 + len2 + len3)
-        else: return 0
+            perimeter = len1 + len2 + len3
+
+            return perimeter
+        else: 
+            return 0
