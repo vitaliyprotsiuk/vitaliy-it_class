@@ -8,7 +8,6 @@ class Tournament:
         for game in games:
             self.add_game(game)
 
-
     def _find_team(self, team):
         for item in self.__teams:
             if item == team:
@@ -24,6 +23,6 @@ class Tournament:
         awayTeam.add_game(game)
 
     def print_table(self):
-        print(f"Team Name       | W | D | L | P")
+        print(f"Team Name        | W | D | L | P")
         for team in self.__teams:
-            print(f"{team} {team.get_wins()} {team.get_draws()} {team.get_loses()} {team.get_points()}")
+            print(f"{team} {str(team.get_wins()) + ' |'} {str(team.get_draws()) + ' |'} {str(team.get_loses()) + ' |'} {str(team.get_points()) + ''}")

@@ -9,6 +9,8 @@ class Team:
     def __init__(self, id, name):
         self.__id = id
         self.__name = name
+        while len(self.__name) < 18:
+            self.__name += " "
         
     def add_game(self, game):
         self.__games.append(game)

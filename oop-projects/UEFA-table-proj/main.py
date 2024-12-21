@@ -1,10 +1,9 @@
 from team import Team
-from table import Table
 from game import Game
 from tournament import Tournament
 
 def read_teams():
-    file_teams = open("teams.txt")
+    file_teams = open("C:/Users/xiz60/Desktop/it class/oop_projects/oop-projects/UEFA-table-proj/teams.txt")
     teams = []
     while True:
         team_line = file_teams.readline()
@@ -23,7 +22,7 @@ def find_team_by_id(teams, team_id):
 
 
 def read_games(teams):
-    file_games = open("games.txt")
+    file_games = open("C:/Users/xiz60/Desktop/it class/oop_projects/oop-projects/UEFA-table-proj/games.txt")
     games = []
     while True:
         game_line = file_games.readline()
