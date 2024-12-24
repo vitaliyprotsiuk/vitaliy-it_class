@@ -7,6 +7,15 @@ class Tournament:
         self.__teams = teams
         for game in games:
             self.add_game(game)
+        self.sort_teams()
+
+    def sort_teams(self):
+        for i in range(0, len(self.__teams)):
+            for j in range(i, len(self.__teams)):
+                if self.__teams[i].get_points() < self.__teams[j].get_points():
+                    temp = self.__teams[i]
+                    self.__teams[i] = self.__teams[j]
+                    self.__teams[j] = temp
 
     def _find_team(self, team):
         for item in self.__teams:

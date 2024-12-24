@@ -3,7 +3,7 @@ class Team:
     __name = ""
     __wins = 0
     __loses = 0
-    __draws = 0    
+    __draws = 0
     __games = []
 
     def __init__(self, id, name):
@@ -11,7 +11,7 @@ class Team:
         self.__name = name
         while len(self.__name) < 18:
             self.__name += " "
-        
+
     def add_game(self, game):
         self.__games.append(game)
 

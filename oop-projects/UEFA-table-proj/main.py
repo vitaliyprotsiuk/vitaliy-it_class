@@ -1,6 +1,7 @@
 from team import Team
 from game import Game
 from tournament import Tournament
+from interactive_cmd import IntCMD
 
 def read_teams():
     file_teams = open("C:/Users/xiz60/Desktop/it class/oop_projects/oop-projects/UEFA-table-proj/teams.txt")
@@ -19,7 +20,6 @@ def find_team_by_id(teams, team_id):
     for team in teams:
         if team.get_id() == team_id:
             return team
-
 
 def read_games(teams):
     file_games = open("C:/Users/xiz60/Desktop/it class/oop_projects/oop-projects/UEFA-table-proj/games.txt")
@@ -46,4 +46,6 @@ games = read_games(teams)
 
 tournament = Tournament(games, teams)
 
-tournament.print_table()
+
+intcmd = IntCMD(games, teams)
+intcmd.cheking()
