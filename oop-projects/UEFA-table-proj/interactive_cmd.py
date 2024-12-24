@@ -21,17 +21,14 @@ class IntCMD:
         self.__input = int(input())
         
         if self.__input == 1:
-            print()
             self._add_game()
 
         elif self.__input == 2:
-            print()
             tournament = Tournament(self.__games, self.__teams)
 
             tournament.print_table()
 
         else:
-            print()
             print("You can choose only 1 or 2")
 
         
