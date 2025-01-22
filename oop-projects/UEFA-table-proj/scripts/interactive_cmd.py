@@ -1,4 +1,5 @@
-from tournament import Tournament
+from scripts.tournament import Tournament
+from data.config import GAMES_PATH
 
 class IntCMD:
     __input = None
@@ -9,9 +10,9 @@ class IntCMD:
         self.__games = games
         self.__teams = teams
 
-    def _add_game(sll):
+    def _add_game(self):
         input_table = list(map(int, input("Write the game, like:\n1- game-id 2- home-team-id 3- away-team-id 4- home-team-score 5- away-team-score\n").split(' ')))
-        with open('games.txt', 'a') as game:
+        with open(GAMES_PATH, 'a') as game:
             game.write(f"\n{input_table[0]} {input_table[1]} {input_table[2]} {input_table[3]} {input_table[4]}")
         print("DONE✅")
 
@@ -30,5 +31,3 @@ class IntCMD:
 
         else:
             print("You can choose only 1 or 2")
-
-        

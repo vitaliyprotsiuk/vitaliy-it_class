@@ -1,10 +1,11 @@
-from team import Team
-from game import Game
-from tournament import Tournament
-from interactive_cmd import IntCMD
+from scripts.team import Team
+from scripts.game import Game
+from data.config import *
+from scripts.window import Window
+
 
 def read_teams():
-    file_teams = open("C:/Users/xiz60/Desktop/it class/oop_projects/oop-projects/UEFA-table-proj/teams.txt")
+    file_teams = open(TEAMS_PATH)
     teams = []
     while True:
         team_line = file_teams.readline()
@@ -16,13 +17,15 @@ def read_teams():
         teams.append(team)
     return teams
 
+
 def find_team_by_id(teams, team_id):
     for team in teams:
         if team.get_id() == team_id:
             return team
 
+
 def read_games(teams):
-    file_games = open("C:/Users/xiz60/Desktop/it class/oop_projects/oop-projects/UEFA-table-proj/games.txt")
+    file_games = open(GAMES_PATH)
     games = []
     while True:
         game_line = file_games.readline()
@@ -41,11 +44,14 @@ def read_games(teams):
 
     return games
 
+
 teams = read_teams()
 games = read_games(teams)
 
-tournament = Tournament(games, teams)
+
+window = Window(teams, games)
+window.start_window()
 
 
-intcmd = IntCMD(games, teams)
-intcmd.cheking()
+"""intcmd = IntCMD(games, teams)
+intcmd.cheking()"""

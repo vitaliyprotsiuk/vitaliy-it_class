@@ -1,0 +1,2 @@
+TEAMS_PATH = "C:/Users/xiz60/Desktop/it class/oop_projects/oop-projects/UEFA-table-proj/data/teams.txt"
+GAMES_PATH = "C:/Users/xiz60/Desktop/it class/oop_projects/oop-projects/UEFA-table-proj/data/games.txt"
