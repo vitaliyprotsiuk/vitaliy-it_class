@@ -38,13 +38,13 @@ def read_games(teams):
         home_team_score = int(props[3])
         away_team_score = int(props[4])
 
-        game = Game(props[0], find_team_by_id(teams, id_home_team), find_team_by_id(teams, id_away_team), home_team_score, away_team_score)
+        game = Game(find_team_by_id(teams, id_home_team), find_team_by_id(teams, id_away_team), home_team_score, away_team_score)
         games.append(game)
 
 
     return games
 
-
+ 
 teams = read_teams()
 games = read_games(teams)
 

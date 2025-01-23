@@ -1,12 +1,10 @@
 class Game:
-    __id = 0
     __homeTeam = None
     __awayTeam = None
     __homeTeamScore = 0
     __awayTeamScore = 0
 
-    def __init__(self, id, homeTeam, awayTeam, homeTeamScore, awayTeamScore):
-        self.__id = id
+    def __init__(self, homeTeam, awayTeam, homeTeamScore, awayTeamScore):
         self.__homeTeam = homeTeam
         self.__awayTeam = awayTeam
         self.__homeTeamScore = homeTeamScore
