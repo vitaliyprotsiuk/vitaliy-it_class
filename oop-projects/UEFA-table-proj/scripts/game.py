@@ -10,9 +10,6 @@ class Game:
         self.__homeTeamScore = homeTeamScore
         self.__awayTeamScore = awayTeamScore
 
-    def get_if(self):
-        return self.__id
-
     def get_home_team(self):
         return self.__homeTeam
 

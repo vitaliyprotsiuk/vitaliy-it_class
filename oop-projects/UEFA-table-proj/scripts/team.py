@@ -14,10 +14,10 @@ class Team:
 
     def add_game(self, game):
         self.__games.append(game)
-
         home_score = game.get_home_team_score()
         away_score = game.get_away_team_score()
-        
+
+
         if home_score == away_score:
             self.__draws += 1
         elif self == game.get_home_team() and home_score > away_score:
@@ -29,7 +29,7 @@ class Team:
 
 
     def get_points(self):   
-        return self.__wins * 3 + self.__draws
+        return (self.__wins * 3) + self.__draws
     
     def get_wins(self):
         return self.__wins
@@ -42,6 +42,9 @@ class Team:
     
     def get_id(self):
         return self.__id
+    
+    def get_name(self):
+        return self.__name
 
     def __str__(self):
         return self.__name

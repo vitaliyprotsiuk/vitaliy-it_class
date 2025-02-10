@@ -22,7 +22,7 @@ class Tournament:
 
     def _find_team(self, team):
         for item in self.__teams:
-            if item == team:
+            if item.get_name() == team:
                 return team
 
 
