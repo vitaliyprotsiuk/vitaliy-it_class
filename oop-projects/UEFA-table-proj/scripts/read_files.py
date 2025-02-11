@@ -11,7 +11,7 @@ def read_games(teams: list):
                 break
 
             array = line.split(' ')
-            game = Game(find_name_by_id(teams, int(array[1])), find_name_by_id(teams, int(array[2])), int(array[3]), int(array[4]))
+            game = Game(int(array[0]), find_name_by_id(teams, int(array[1])), find_name_by_id(teams, int(array[2])), int(array[3]), int(array[4]))
             games.append(game)
         
         return games
